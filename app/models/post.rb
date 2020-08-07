@@ -4,5 +4,7 @@ class Post < ActiveRecord::Base
   expect(post.post_summary).to eq("My title - The post description")
   end
   
-  
+  def post_summary
+    self.title + " - " + self.description
+  end
 end
